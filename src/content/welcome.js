@@ -10,62 +10,78 @@ import config from '../config/config.js';
 // TODO: format all the discord links create components
 // TODO: pull this out to a handler
 
-const rulesImgEmbed = new EmbedBuilder()
-    .setColor(0xDF585B)
-    .setImage('https://i.imgur.com/KGyMpU5.png');
-
 const rulesEmbed = new EmbedBuilder()
     .setColor(0xDF585B)
     .setTitle('Rules')
     .addFields(
         {
-            name: '`1`. **Hate has no home here.**',
+            name: '`1`. **Be Civil & Respectful.**',
             value:
-                '> No hate speech, slurs, homophobia, gatekeeping (including transmedicalism), or transphobia is allowed under **ANY** circumstances. (Even in "joking" scenarios.). **Please refrain from sharing any Images/Videos containing the above content, even if the intention is to criticise the individuals responsible.** [Read More](https://canary.discord.com/channels/959551566388547676/1151689401643053107/1151694186257600522)',
+                '> Treat others with kindness and respect at all times. Do not lie about your age. Lying about age is a instant ban always. Avoid offensive behavior, personal attacks, and disrespectful language. Disagreements are acceptable, but keep discussions constructive and avoid being overly confrontational. [Read More](https://canary.discord.com/channels/1135300957572431902/1244419116098650184)',
         },
         {
-            name: '`2`. **No age-restricted, obscene, shocking, gory, or overly violent content.**',
-            value: '> Our community remains appropriate for anyone over the age of 13; any content deemed unfit for this is disallowed. If something straddles the line, ask a mod, CW, or don’t post it at all. This includes text, images, or links. [Read More](https://canary.discord.com/channels/959551566388547676/1151689483977236610/1151694304037838910)',
+            name: '`2`. **No Spam or Self-Promotion.**',
+            value: '> Do not flood the server with irrelevant or repetitive messages. Self-promotion, such as sharing links or content related to external products or services, is only allowed if explicitly approved by the server administrators. This includes the promotion or offering invites to other discord servers. Even if you yourself don\'t own it. It still is promoting another discord server, and forbidden.',
         },
         {
-            name: '`3`. **Avoid disallowed topics and phrases.**',
-            value: '> This includes, but is not limited to: **heavy venting,** **political discussions,** **piracy,** and **promoting or extensively discussing the use of recreational substances, legal or otherwise.** `(#mature-general is an exception for legal substances)` More information on these banned topics can be found in `#politics`, `#venting`, or in our list of disallowed topics and phrases [here](https://canary.discord.com/channels/959551566388547676/1151689644052840589/1151694373424218163)',
+            name: '`3`. **No Doxxing or Sharing Personal Info.**',
+            value: '> Sharing personal information of any user without their consent is strictly prohibited. This includes real names, addresses, contact details, or any other private information.',
         },
         {
-            name: '`4`. **Advocating any Illegitimate/DIY Medical treatment is not permitted, especially HRT, binders, and dosages.**',
-            value: '> This extends to conversations about sourcing HRT through illegitimate means. Additionally, please refrain from discussing/encouraging DIY binders, as they have the potential to harm the wearers if not properly handled.',
+            name: '`5`. **No Breaking the Discord TOS or Community Guidelines.**',
+            value: '> Being under 13 is [not allowed](<https://support.discord.com/hc/en-us/articles/360040724612-Why-is-Discord-asking-for-my-birthday>). Furthermore discussions or sharing of any illegal content, including but not limited to malicious software, illegal drugs, or any other illicit activities, are also not allowed in the server.',
         },
         {
-            name: '5. **Treat everyone with respect.**',
-            value: '> Refrain from engaging in any form of discrimination against others, regardless of age, gender, identity, orientation, and so forth. Absolutely no harassment, witch hunting, sexism, racism, or any form of hate targeting generalised groups of people will be tolerated. [Read More](https://canary.discord.com/channels/959551566388547676/1151689706912882758/1151694425110609941)',
+            name: '`6`. **Absolutely No Bigotry.**',
+            value: '> There is a zero-tolerance policy towards any form of bigotry. This includes transphobia, homophobia, racism, sexism, and any discriminatory attitudes towards individuals based on their identity or orientation.',
         },
         {
-            name: '`6`. **Respect plural members, and only use PK for our allowed use cases.**',
-            value: '> If you see users talking with the bot tag, they\'re talking through PluralKit. Due to Discord limitations, these messages will show up with the `[BOT]` tag - however, they are not bots, they are users. **Additionally, PluralKit is only to be used as a mental health aid, not for any form of roleplay.**',
+            name: '`7`. **No Pedophilia Apologism.**',
+            value: '> Under no circumstances should pedophilia be normalized or defended. This includes any attempts to compare it favorably to non-heterosexual sexualities or discussions involving drawn/animated child pornography. No slurs in ANY way.',
         },
         {
-            name: '`7`. **Be considerate of others\' triggers.**',
-            value: '> We understand that with such a diverse and large community, it\'s not always feasible to avoid every trigger. Nevertheless, please make an effort to acknowledge and respect others\' triggers, refrain from attempting to change their mind or prove them wrong. **Remember, as this large community, your triggers are also your responsibility too.** If a chat topic triggers you (unless listed below), consider stepping back and removing yourself from the situation until the conversation topic changes.\n\n> ***Note:*** *You can hide messages with triggering content by using a double upright slash:* TW ||trigger|| - ||content||. For instance, "TW ||spiders|| - ||Check out these [Spider Images]||." **You can find a list of common triggers** [Here](https://canary.discord.com/channels/959551566388547676/1151689903319564329/1151690023331172412).',
+            name: '`8.` **Age-Appropriate Content Only.**',
+            value: '> Please avoid sharing any suggestive or explicit content, as well as engaging in explicit discussions. We have minors in our community, and such content shouldn\'t be seen by minors. **Breaking rule 8 will result in 2 warns as it is a serious offense.** [Read More](https://canary.discord.com/channels/1135300957572431902/1244419061270712361)',
         },
         {
-            name: '`8.` **Avoid mini-modding or arguing with moderators in chat.**',
-            value: '> If you see rules being broken, please use our custom report `[Example Below]` feature or open a support ticket instead of taking matters into your own hands. Our staff team volunteer their time to ensure a positive environment, and their decisions are always made with the community\'s best interests at heart. If you ever have concerns regarding a decision we\'ve made, we welcome you to open a ticket or direct message a senior staff member or admin.',
+            name: '`9.` **Please keep stuff to the right channels.**',
+            value: '> Venting in venting channels, VC Related chat in no mic or the voice call channel itself, etc\n> This includes Mention of commiting, Anything to do with Eating Disorders, Suicide, Self harm.',
         },
         {
-            name: '`9`. **Keep in mind effective conflict resolution and interpersonal skills.**',
-            value: '> Practise effective de-escalation—everyone has different ways of doing this, but some common tactics include conceding several points and then changing the topic, agreeing to disagree, stepping back from the conversation outright, calling a chat mod to mediate, and/or being the first to apologise. [Read More](https://canary.discord.com/channels/959551566388547676/1151689755537457265/1151694463127793674)',
+            name: '`10.` **Do not spam the any of the ping roles.**',
+            value: '** **',
         },
         {
-            name: '`10`. **No spam or self-promotion.**',
-            value: '> Including by not limited to `[server invites, advertisements, etc.]`, **unless given explicit permission from a staff member.** This includes sending unsolicited server invites, advertisements, or direct messages with the intention of promoting content.',
+            name: '`11.` **Do not Minimod.**',
+            value: '> Mini-modding is against the guidelines because it gets in the way of actual mods doing their job. If every user started taking on the position of a mod without the proper tools to do so, it would be chaos. Here is why Minimodding is bad [Example on why its bad and what it is by Hypixel ](<https://hypixel.net/threads/3370860/>) ',
         },
         {
-            name: '`11`. **Keep on-topic in all channels.**',
-            value: '>  We understand conversations naturally drift; however, if they do not self-correct after a while, a mod may step in to help do so.',
+            name: '`12.` **Do not impersonate other users without their permission.**',
+            value: '> It can cause others to become uncomfortable. Additionally users should be allowed to control their own image.',
         },
         {
-            name: '`12`. **Keep all conversations in English.**',
-            value: '>  Short phrases or jokes in another language are allowed, but we cannot effectively moderate non-English extensive discussions. (Non-English threads are an exception you can find the list of these threads [Here](https://canary.discord.com/channels/959551566388547676/1151689825687195678/1151694529750106186))"',
+            name: '`13.` **Respect plural members, and only use PK for our allowed use cases.**',
+            value: '> If you see users talking with the bot tag, they\'re talking through PluralKit. Due to Discord limitations, these messages will show up with the [BOT] tag - however, they are not bots, they are users. Additionally, PluralKit is not for any form of roleplay. Any form of discrimination or hate against alters will be met with a ban, all forms and origins of plurality are accepted here.\n> All users of an account are responsible for its conduct. This includes plural users. It is up to the collective users of an account to be responsible for what happens on their account.',
+        },
+        {
+            name: '`14.` **Moderator Discretion.**',
+            value: '> Used by moderators when something is not strictly against the rules, but is blatantly wrong.',
+        },
+        {
+            name: '`15.` **Keep #lies to harmless fun.**',
+            value: '> Please avoid venting in ⁠lies. we have serious channels if you need to vent somewhere, but please keep it out of the general channels because it can be triggering.',
+        },
+        {
+            name: '`16.` **Keep all conversations in English.**',
+            value: '> Short phrases or jokes in another language are allowed, but we cannot effectively moderate non-English extensive discussions.',
+        },
+        {
+            name: '`17.` **This server uses automod to block messages deemed nsfw, violent, or triggering. Do not circumvent the automod.**',
+            value: '** **',
+        },
+        {
+            name: '`18.` **The most important one.**',
+            value: '> If you haven\'t already make sure to check out our subreddit https://www.reddit.com/r/GenderAnarchy/ <3',
         },
         {
             name: '** **\n**By joining this server you agree to the following guidelines**',
@@ -86,7 +102,7 @@ const notesReportEmbed = new EmbedBuilder()
 const mentalHealthEmbed = new EmbedBuilder()
     .setColor(0xDF585B)
     .setTitle('🔴 IMPORTANT 🔴')
-    .setDescription('We are not mental health professionals. As much as we would like to be able to render assistance in every way possible, we as staff do not have the capacity or the professional qualifications to render proper assistance with mental health issues, nor are we able to give professional advice. Because of this, we do not have any vent/advice channels. We ask that you seek out appropriate help if you are experiencing a crisis and not depend on this server as an emotional crutch. Please avoid topics that are very heavy emotionally loaded. Thank you for understanding ❤️')
+    .setDescription('We are not mental health professionals. As much as we would like to be able to render assistance in every way possible, we as staff do not have the capacity or the professional qualifications to render proper assistance with mental health issues, nor are we able to give professional advice. Thank you for understanding ❤️')
     .setImage('https://i.imgur.com/CBbbw0d.png');
 
 function buildWelcomeComponents(client, magicMessage) {
@@ -101,13 +117,11 @@ function buildWelcomeComponents(client, magicMessage) {
                     .setLabel('Scroll To Rules!')
                     .setStyle(ButtonStyle.Link),
                 client.getButton('startVerification'),
-                client.getButton('addEmojiVoid'),
             ),
     ];
 }
 
 const welcomeEmbeds = [
-    rulesImgEmbed,
     rulesEmbed,
     notesReportEmbed,
     mentalHealthEmbed,

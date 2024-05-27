@@ -10,7 +10,6 @@ const CloseReason = Object.freeze({
     kick: Symbol('kick'),
     ban: Symbol('ban'),
     archive: Symbol('archive'),
-    emoji: Symbol('emoji'),
 });
 
 const closeMessages = {
@@ -20,7 +19,6 @@ const closeMessages = {
     [CloseReason.kick]: inlineCode('Ticket closed - user was kicked'),
     [CloseReason.ban]: inlineCode('Ticket closed - user was banned'),
     [CloseReason.archive]: inlineCode('Ticket closed - archive by verifier'),
-    [CloseReason.emoji]: inlineCode('Ticket closed - user went to the emoji void'),
 };
 
 const closeReasons = {
@@ -30,7 +28,6 @@ const closeReasons = {
     [CloseReason.kick]: 'User was kicked',
     [CloseReason.ban]: 'User was banned',
     [CloseReason.archive]: 'Archived by verifier',
-    [CloseReason.emoji]: 'User went to the emoji void',
 };
 
 /**

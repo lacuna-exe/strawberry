@@ -50,7 +50,7 @@ async function startVerification(threads, applicant, resolve, reject, promptCate
 
     if (!webhooks.size) {
         await ticket.parent.createWebhook({
-            name: 'Verification Kyle Proxy',
+            name: 'Verification Caitlin Proxy',
         });
     }
 
@@ -66,9 +66,9 @@ async function startVerification(threads, applicant, resolve, reject, promptCate
 
             if (userMessages.size === 0) {
                 await webhook.send({
-                    content: `Welcome ${applicant} <a:TPF_GawrGura_Wave:968391057828093952>,\n\nI just wanted to check in with you and give you a heads up that we kindly ask all questions to be answered within 3 hours to avoid being kicked for inactivity.\n\nThankies <a:TPA_Trans_Heart:960885444285968395>`,
-                    username: 'Kyle ♡ [Any Pronouns]',
-                    avatarURL: 'https://i.imgur.com/fOJFzGz.png',
+                    content: `Welcome ${applicant} <:DemonThumbsup:1147951767682818201>,\n\nI just wanted to check in with you and give you a heads up that we kindly ask all questions to be answered within 3 hours to avoid being kicked for inactivity.\n\nThankies <:DemonCelebrate:1147951774683119676>`,
+                    username: 'Caitlin ♡ [She/Her]',
+                    avatarURL: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5338ca53-41c2-462d-be16-6526b3fc62e4/de8nmsp-a45871f4-82e5-49b3-8e7c-86968edf307b.png/v1/fill/w_894,h_894,q_70,strp/new_canvas______2__by_nradiowave_de8nmsp-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzUzMzhjYTUzLTQxYzItNDYyZC1iZTE2LTY1MjZiM2ZjNjJlNFwvZGU4bm1zcC1hNDU4NzFmNC04MmU1LTQ5YjMtOGU3Yy04Njk2OGVkZjMwN2IucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.SHs-1WN4BcMz1NjJF8Q9K51Tigfak2GaTxZwWqy_I4A',
                     threadId: ticket.id,
                 });
             }
@@ -88,27 +88,13 @@ async function startVerification(threads, applicant, resolve, reject, promptCate
                 if (userMessages.size === 0) {
                     await webhook.send({
                         content: 'Also, I noticed your account is pretty new, could you explain why?\n\nAnd do you happen to have any other online accounts (Twitter/Reddit/Etc) which has more history that you could send us a link to?\n\nNw if not ^^',
-                        username: 'Kyle ♡ [Any Pronouns]',
-                        avatarURL: 'https://i.imgur.com/fOJFzGz.png',
+                        username: 'Caitlin ♡ [She/Her]',
+                        avatarURL: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5338ca53-41c2-462d-be16-6526b3fc62e4/de8nmsp-a45871f4-82e5-49b3-8e7c-86968edf307b.png/v1/fill/w_894,h_894,q_70,strp/new_canvas______2__by_nradiowave_de8nmsp-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzUzMzhjYTUzLTQxYzItNDYyZC1iZTE2LTY1MjZiM2ZjNjJlNFwvZGU4bm1zcC1hNDU4NzFmNC04MmU1LTQ5YjMtOGU3Yy04Njk2OGVkZjMwN2IucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.SHs-1WN4BcMz1NjJF8Q9K51Tigfak2GaTxZwWqy_I4A',
                         threadId: ticket.id,
                     });
                 }
             }
         }, 38000);
-    }
-
-    if (member && member.roles.cache.has(config.roles.place)) {
-        setTimeout(async () => {
-            const thread = await ticket.parent.threads.fetch(ticket.id);
-            if (thread && !thread.archived) {
-                await webhook.send({
-                    content: 'I can see that you picked up the r/place 2023 role, could you share your reddit username / link your reddit account?',
-                    username: 'Kyle ♡ [Any Pronouns]',
-                    avatarURL: 'https://i.imgur.com/fOJFzGz.png',
-                    threadId: ticket.id,
-                });
-            }
-        }, 60000);
     }
 
     // Add a 3h timer to remind staff to close the ticket if the user hasn't responded
@@ -121,7 +107,7 @@ async function startVerification(threads, applicant, resolve, reject, promptCate
 
             if (userMessages.size === 0) {
                 await thread.send({
-                    content: `Hi there! ${applicant}, <a:TPF_Squid_Wave:968411630981496852>\n\nIt looks like it's been 3 hours since we've heard from you, so we just wanted to tell you this ticket has been marked as inactive and has been set to be deleted soon.\n\nWe don't want to close your ticket or kick you out, so please let us know if you need more time to respond. Just give us a heads up and we'll be happy to wait a bit longer. \n\nThanks! <a:TPA_Trans_Heart:960885444285968395>${config.roles.inactivityPing ? ` | (<@&${config.roles.inactivityPing}>)` : ''}`,
+                    content: `Hi there! ${applicant}, <:DemonFire:1147951717888041001>\n\nIt looks like it's been 3 hours since we've heard from you, so we just wanted to tell you this ticket has been marked as inactive and has been set to be deleted soon.\n\nWe don't want to close your ticket or kick you out, so please let us know if you need more time to respond. Just give us a heads up and we'll be happy to wait a bit longer. \n\nThanks! <:DemonCelebrate:1147951774683119676>${config.roles.inactivityPing ? ` | (<@&${config.roles.inactivityPing}>)` : ''}`,
                     threadId: ticket.id,
                     allowedMentions: {
                         roles: [config.roles.inactivityPing],
@@ -152,7 +138,7 @@ async function startVerification(threads, applicant, resolve, reject, promptCate
                     {
                         ticket,
                         verifier: applicant,
-                        userReason: 'Kicked for Inactivity, feel free to rejoin once you have time to answer the questions!~\n\nhttps://discord.gg/TransPlace',
+                        userReason: 'Kicked for Inactivity, feel free to rejoin once you have time to answer the questions!~\n\nhttps://discord.gg/GenderAnarchy',
                         logReason: 'Kicked for Inactivity - No messages in 24h (Auto)',
                     },
                 ).catch(async () => {

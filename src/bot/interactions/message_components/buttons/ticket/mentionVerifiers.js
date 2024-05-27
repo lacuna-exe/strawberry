@@ -5,7 +5,7 @@ import InteractionHelper from '../../../../utils/InteractionHelper.js';
 import TakesArguments from '../../../TakesArguments.js';
 import Button from '../../Button.js';
 
-const maxHeartId = '968321960557809674'; // id of emoji :max_heart: from TransPlace
+const gayHeartId = '1135714747803783269'; // id of emoji :GayHeart: from Gender Anarchy
 
 /**
  * Handler for mentionVerifiers button. Summons verifiers to the verification ticket.
@@ -75,7 +75,7 @@ class MentionVerifiers extends Button {
                 // an emoji is supposed to be there if emoji is not found
                 return InteractionHelper.reply(
                     interaction,
-                    `Verifiers have been pinged. Please be patient as they go through the queue <:max_heart:${maxHeartId}>`,
+                    `Verifiers have been pinged. Please be patient as they go through the queue <:GayHeart:${gayHeartId}>`,
                     true,
                 );
             },

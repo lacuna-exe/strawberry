@@ -57,7 +57,7 @@ class MessageCreate extends Event {
 
                         if (!webhooks.size) {
                             await message.channel.parent.createWebhook({
-                                name: 'Verification Kyle Proxy',
+                                name: 'Verification Caitlin Proxy',
                             });
                         }
 
@@ -65,8 +65,8 @@ class MessageCreate extends Event {
 
                         await webhook.send({
                             content: `\`[Reminder]\`\n${message.author} Please make sure to click the \`"Finished Answering!"\` or \`"I Need Help Please."\` buttons at the top of the channel after you've finished answering to complete the verification process. ^^`,
-                            username: 'Kyle ♡ [Any Pronouns]',
-                            avatarURL: 'https://i.imgur.com/fOJFzGz.png',
+                            username: 'Caitlin ♡ [She/Her]',
+                            avatarURL: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5338ca53-41c2-462d-be16-6526b3fc62e4/de8nmsp-a45871f4-82e5-49b3-8e7c-86968edf307b.png/v1/fill/w_894,h_894,q_70,strp/new_canvas______2__by_nradiowave_de8nmsp-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzUzMzhjYTUzLTQxYzItNDYyZC1iZTE2LTY1MjZiM2ZjNjJlNFwvZGU4bm1zcC1hNDU4NzFmNC04MmU1LTQ5YjMtOGU3Yy04Njk2OGVkZjMwN2IucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.SHs-1WN4BcMz1NjJF8Q9K51Tigfak2GaTxZwWqy_I4A',
                             threadId: message.channel.id,
                         });
                     }

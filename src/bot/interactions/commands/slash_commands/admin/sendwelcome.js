@@ -48,7 +48,7 @@ class SendWelcome extends SlashCommand {
             });
 
             await interaction.channel.send({
-                embeds: [welcomeEmbeds[2], welcomeEmbeds[3]],
+                embeds: [welcomeEmbeds[2]],
                 components: buildWelcomeComponents(interaction.client, msg.id),
             });
 

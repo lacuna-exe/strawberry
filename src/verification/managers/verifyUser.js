@@ -3,7 +3,6 @@ import config from '../../config/config.js';
 import { createVerifiedLog } from '../controllers/log.js';
 import { assignRole, isVerifier } from '../controllers/member.js';
 import { fetchApplicant, archiveTicket } from '../controllers/ticket.js';
-import sendGreetMessage from '../controllers/greet.js';
 
 /**
  * Closes a verification ticket
@@ -20,7 +19,6 @@ async function closeTicket(ticket) {
  */
 async function verify(member, type) {
     await assignRole(member, config.roles.verified);
-    await assignRole(member, config.roles.newbie);
     if (type === 'noImages' && config.roles.noImages) {
         await assignRole(member, config.roles.noImages);
     }
@@ -58,10 +56,6 @@ async function verifyUser(ticket, verifier, resolve, reject, type) {
 
     // send welcome message and create log for successful verification
     await Promise.all([
-        sendGreetMessage(
-            ticket.guild.channels.cache.get(config.channels.welcome),
-            applicant,
-        ),
         createVerifiedLog(
             ticket.guild.channels.cache.get(config.channels.verifyLogs),
             verifier,
