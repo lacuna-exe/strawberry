@@ -37,18 +37,18 @@ class SendWelcome extends SlashCommand {
 
         if (preview) {
             await InteractionHelper.reply(interaction, {
-                embeds: [welcomeEmbeds[0], welcomeEmbeds[1]],
+                embeds: [welcomeEmbeds[0]],
             }, true);
         } else {
             await InteractionHelper.deferReply(interaction, true);
 
             // Sent as two embeds as it's over 6000 characters
-            let msg = await interaction.channel.send({
-                embeds: [welcomeEmbeds[0], welcomeEmbeds[1]],
+            const msg = await interaction.channel.send({
+                embeds: [welcomeEmbeds[0]],
             });
 
             await interaction.channel.send({
-                embeds: [welcomeEmbeds[2]],
+                embeds: [welcomeEmbeds[1], welcomeEmbeds[2], welcomeEmbeds[3]],
                 components: buildWelcomeComponents(interaction.client, msg.id),
             });
 
