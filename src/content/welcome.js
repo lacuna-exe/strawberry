@@ -20,35 +20,35 @@ const rulesEmbed = new EmbedBuilder()
         },
         {
             name: '`2.` No spam or self promotion.',
-            value: ': "Do not flood the server with irrelevant or repetitive messages. Self-promotion, such as sharing links or content related to external products or services, is only allowed if explicitly approved by the server administrators. \nThis includes the promotion or offering invites to other discord servers. Even if you yourself don\'t own it. It still is promoting another discord server, and forbidden.',
+            value: 'Do not flood the server with irrelevant or repetitive messages. Self-promotion, such as sharing links or content related to external products or services, is only allowed if explicitly approved by the server administrators. \nThis includes the promotion or offering invites to other discord servers. Even if you yourself don\'t own it. It still is promoting another discord server, and forbidden.',
         },
         {
             name: '`3.` No Doxing or Sharing Personal Info.',
-            value: ': "Sharing personal information of any user without their consent is strictly prohibited. This includes real names, addresses, contact details, or any other private information.',
+            value: 'Sharing personal information of any user without their consent is strictly prohibited. This includes real names, addresses, contact details, or any other private information.',
         },
         {
             name: '`5.` No Breaking Discord TOS or Community Guidelines.',
-            value: ': "Being under 13 is [not allowed](https://support.discord.com/hc/en-us/articles/360040724612-Why-is-Discord-asking-for-my-birthday). Furthermore discussions or sharing of any illegal content, including but not limited to malicious software, illegal drugs, or any other illicit activities, are also not allowed in the server.\n[Discord TOS](https://dis.gd/tos) or [Community Guidelines](https://dis.gd/guidelines)',
+            value: 'Being under 13 is [not allowed](https://support.discord.com/hc/en-us/articles/360040724612-Why-is-Discord-asking-for-my-birthday). Furthermore discussions or sharing of any illegal content, including but not limited to malicious software, illegal drugs, or any other illicit activities, are also not allowed in the server.\n[Discord TOS](https://dis.gd/tos) or [Community Guidelines](https://dis.gd/guidelines)',
         },
         {
             name: '`6.` Absolutely No Bigotry.',
-            value: ': "There is a zero-tolerance policy towards any form of bigotry. This includes transphobia, homophobia, racism, sexism, and any discriminatory attitudes towards individuals based on their identity or orientation. [Read More](https://canary.discord.com/channels/1135300957572431902/1246854278086135828)',
+            value: 'There is a zero-tolerance policy towards any form of bigotry. This includes transphobia, homophobia, racism, sexism, and any discriminatory attitudes towards individuals based on their identity or orientation. [Read More](https://canary.discord.com/channels/1135300957572431902/1246854278086135828)',
         },
         {
             name: '`7.` No Pedophilia Apologism.',
-            value: ': "Under no circumstances should pedophilia be normalized or defended. This includes any attempts to compare it favorably to non-heterosexual sexualities or discussions involving drawn/animated child pornography.',
+            value: 'Under no circumstances should pedophilia be normalized or defended. This includes any attempts to compare it favorably to non-heterosexual sexualities or discussions involving drawn/animated child pornography.',
         },
         {
             name: '`8.` Age-Appropriate Content Only.',
-            value: ': "To ensure a safe and welcoming space for all, please avoid sharing any suggestive or explicit content, as well as engaging in explicit discussions. We have minors in our community, and such content shouldn\'t be seen by minors. Absolutely 0 NSFW content should be included in your profile.  [Read More](https://canary.discord.com/channels/1135300957572431902/1246854230371995648)',
+            value: 'To ensure a safe and welcoming space for all, please avoid sharing any suggestive or explicit content, as well as engaging in explicit discussions. We have minors in our community, and such content shouldn\'t be seen by minors. Absolutely 0 NSFW content should be included in your profile.  [Read More](https://canary.discord.com/channels/1135300957572431902/1246854230371995648)',
         },
         {
             name: '`9.` Please keep all channels on-topic.',
-            value: ': "Please keep topics in a channel within the general theme of the channel. This includes venting staying within the venting channels. Topics about ||eating disorders, suicide, and self harm,|| are strictly prohibited for the safety of members.',
+            value: 'Please keep topics in a channel within the general theme of the channel. This includes venting staying within the venting channels. Topics about ||eating disorders, suicide, and self harm,|| are strictly prohibited for the safety of members.',
         },
         {
             name: '`10.` No spam.',
-            value: ': "Please do not spam within the server. This includes spam pinging members and roles.',
+            value: 'Please do not spam within the server. This includes spam pinging members and roles.',
         },
     )
     .setImage('https://i.imgur.com/CBbbw0d.png');
